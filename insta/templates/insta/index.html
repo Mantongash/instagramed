@@ -15,6 +15,7 @@
         {% csrf_token%}
         {{form | crispy}}
           <button class="btn btn-info" type="submit">Sign Up</button>
+          <p><small class="text-muted">Already have an account? <a href="#">Sign In</a></small></p>
       </form>
     </div>
   </div>
