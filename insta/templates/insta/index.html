@@ -1,4 +1,6 @@
-{% extends "insta/base.html"%} {% block content %}
+{% extends "insta/base.html"%}
+{% load crispy_forms_tags %}
+{% block content %}
 <div class="container">
   <div class="row">
     <div class="col-md-6">
@@ -11,7 +13,7 @@
       <p class="signup text-center">Sign Up to see photos and videos of your friends</p>
       <form action="" method="POST">
         {% csrf_token%}
-        {{form.as_p}}
+        {{form | crispy}}
           <button class="btn btn-info" type="submit">Sign Up</button>
       </form>
     </div>
