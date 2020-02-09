@@ -10,3 +10,18 @@
   background: url("../images/1.jpg") no-repeat center center/cover;
   animation: slide 20s infinite;
 }
+
+@keyframes slide {
+  25% {
+    background: url("../images/2.jpg") no-repeat center center/cover;
+  }
+  50% {
+    background: url("../images/3.jpg") no-repeat center center/cover;
+  }
+  75% {
+    background: url("../images/4.jpg") no-repeat center center/cover;
+  }
+  100% {
+    background: url("../images/5.jpg") no-repeat center center/cover;
+  }
+}
