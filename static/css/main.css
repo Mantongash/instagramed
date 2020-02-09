@@ -25,6 +25,11 @@
   font-size: 1.5rem;
 }
 
+.signup-section {
+  width: 20%;
+  background: red;
+}
+
 .slider {
   width: 400px;
   height: 400px;
