@@ -10,12 +10,12 @@
     </div>
     <div class="col-md-6">
       <h3 class="title text-center">Instagramed</h3>
-      <p class="signup text-center">Sign Up to see photos and videos of your friends</p>
+      <p class="signin text-center">Sign In</p>
       <form action="" method="POST">
-        {% csrf_token%}
+        {% csrf_token %}
         {{form | crispy}}
-          <button class="btn btn-info" type="submit">Sign Up</button>
-          <p><small class="text-muted">Already have an account? <a href="{% url 'login' %}">Sign In</a></small></p>
+          <button class="btn btn-info" type="submit">Sign In</button>
+          <p><small class="text-muted">Need an account? <a href="{% url 'index' %}">Sign Up Now</a></small></p>
       </form>
     </div>
   </div>

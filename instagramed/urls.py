@@ -15,11 +15,19 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
+from account.views import account_home, profile
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', auth_views.LoginView.as_view(template_name="account/login.html"), name="login"),
-    path('logout/', auth_views.LogoutView.as_view(template_name="account/login.html"), name="logout"),
+    path('login/', auth_views.LoginView.as_view(template_name="login/login.html"), name="login"),
+    path('logout/', auth_views.LogoutView.as_view(template_name="login/logout.html"), name="logout"),
+    path('account_home/', account_home, name="account_home"),
+    path('profile/', profile, name="profile"),
     path("", include("insta.urls"))
 ]
+
+if settings.DEBUG:
+    urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -12,6 +12,60 @@
       url("../fonts/Billabong.woff2") format("woff2"),
       url("../fonts/Billabong.woff") format("woff");
 }
+/* Logged In Homepage Styles */
+.home-title {
+  font-family: "Billabong";
+  font-size: 2rem;
+  padding: 0 1rem;
+  ;
+
+}
+.home {
+  display: flex;
+  margin: 1rem 0;
+  align-items: center;
+
+}
+.insta-icon {
+  padding: 0 1rem;
+  border-right: 2px solid #000
+}
+
+.insta-functions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.insta-heart {
+  padding: 0 2rem;
+}
+
+.insta-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.main {
+  border-bottom: 2px solid #d3d3d3;
+}
+
+.insta-nav a {
+  color: #000;
+  text-decoration: none;
+}
+
+.edit a{
+  display: block;
+  color: #000;
+  border: 1px solid #000;
+  padding: 0.3rem;
+  border-radius:4px;
+}
+
+/* ################## */
 
 .title {
   font-family: "Billabong";
@@ -23,6 +77,13 @@
   font-weight: 700;
   color: #4d4d4d;
   font-size: 1rem;
+}
+
+.signin {
+  font-family:"PT Sans";
+  font-size: 2rem;
+  font-weight: 700;
+  color: #4d4d4d;
 }
 
 .signup-section {

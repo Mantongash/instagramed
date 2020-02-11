@@ -6,11 +6,11 @@ from django.contrib import messages
 def index(request):
   if request.method == "POST":
     form=UserReagisterForm(request.POST)
-    if form.is_valid:
+    if form.is_valid():
       form.save()
       username = form.cleaned_data.get("username")
-      messages.success(request, f("Account for {username} has been created successfully"))
-      return redirect("insta-home")
+      messages.success(request, ("Account for {} has been created successfully").format(username))
+      return redirect("login")
   else:
       form=UserReagisterForm()
   return render(request, "insta/index.html",{"form":form})
