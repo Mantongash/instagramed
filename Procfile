@@ -1,1 +1,1 @@
-web: gunicorn instagramed.wsgi --log-file -
+web: gunicorn instagramed.wsgi --preload
