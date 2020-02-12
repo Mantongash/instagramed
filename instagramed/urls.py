@@ -18,7 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
-from account.views import account_home, profile, edit_profile
+from account.views import account_home, profile, edit_profile, upload
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -27,6 +27,7 @@ urlpatterns = [
     path('account_home/', account_home, name="account_home"),
     path('profile/', profile, name="profile"),
     path('edit_profile/', edit_profile, name="edit_profile"),
+    path('upload/', upload, name="upload"),
     path("", include("insta.urls"))
 ]
 

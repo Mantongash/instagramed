@@ -4,7 +4,19 @@
 {% include 'navbar.html' %}
 
 <div class="container">
-
+  {% for post in posts %}
+  <hr>
+  <p>{{user.username}}</p>
+  <hr>
+  <img src="{{post.image.url}}" alt="Uploaded Image" width="500px">
+  <div class="image-functions d-flex">
+    <p><i class="far fa-heart"></i></p>
+    <p class="px-3"><i class="far fa-comment"></i></p>
+    <p><i class="fas fa-paper-plane"></i></p>
+  </div>
+  <p><em>{{post.caption}}</em></p>
+  {% endfor %}
+  
 </div>
 
 {% endblock content %}

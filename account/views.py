@@ -1,12 +1,14 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth.decorators import login_required
-from insta.forms import ProfileUpdateForm, UserUpdateForm
+from insta.forms import ProfileUpdateForm, UserUpdateForm, UploadForm
 from django.contrib import messages
+from .models import Post
 
 # Create your views here.
 
 def account_home(request):
-  return render(request, "login/home.html")
+   posts = Post.objects.all()
+   return render(request, "login/home.html", {"posts":posts})
 
 @login_required()
 def profile(request):
@@ -34,3 +36,16 @@ def edit_profile(request):
   }
   return render(request, "login/edit_profile.html", context)
   
+@login_required()
+def upload(request):
+ 
+  if request.method == "POST":
+    upload_form = UploadForm(request.POST, request.FILES)
+    if upload_form.is_valid():
+      upload_form.save()
+      return redirect("account_home")
+  else:
+    upload_form = UploadForm()
+    
+  
+  return render(request, "login/upload.html", {"upload_form":upload_form})
