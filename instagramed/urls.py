@@ -18,7 +18,7 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
-from account.views import account_home, profile
+from account.views import account_home, profile, edit_profile
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -26,6 +26,7 @@ urlpatterns = [
     path('logout/', auth_views.LogoutView.as_view(template_name="login/logout.html"), name="logout"),
     path('account_home/', account_home, name="account_home"),
     path('profile/', profile, name="profile"),
+    path('edit_profile/', edit_profile, name="edit_profile"),
     path("", include("insta.urls"))
 ]
 
