@@ -32,7 +32,7 @@ SECRET_KEY = 'nla+w80^1k7ui!5k1xopu@ktkfdb!7_t5vp3gyvn-3koe7s5b2'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["insta1987.herokuapp.com"]
 
 
 # Application definition
